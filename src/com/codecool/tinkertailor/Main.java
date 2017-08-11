@@ -1,20 +1,21 @@
 package com.codecool.tinkertailor;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
     public static void main(String[] args) {
 
-	    TinkerTailor tinkerTailor = new TinkerTailor(5, 3);
-	    List outcome = tinkerTailor.execute();
-	    System.out.println("The outcome of the game is: " + outcome);
+		TinkerTailor test1st = new TinkerTailor(10, 14);
+		List result = test1st.Tinker1st();
+		System.out.println("The result is: " + result + " via ArrayList");
 
-		TinkerTest test1st = new TinkerTest(5, 3);
-		List result = test1st.Tinker2nd();
-		System.out.println("The result is: " + result + " Winner: " + result.get(result.size() - 1));
+		TinkerTailor test2nd = new TinkerTailor(10, 14);
+		List finalResult = test2nd.Tinker2nd();
+		System.out.println("The result is: " + finalResult + " via LinkedList");
 
-		TinkerTest2nd test2nd = new TinkerTest2nd(5, 3);
-		List finalResult = test2nd.Tinker3rd();
-		System.out.println("The result is: " + finalResult);
+		TinkerTailor test3rd = new TinkerTailor(10, 14);
+		Set ultimateResult = test3rd.Tinker3rd();
+		System.out.println("The result is: " + ultimateResult + " via LinkedHashSet");
 	}
 }
